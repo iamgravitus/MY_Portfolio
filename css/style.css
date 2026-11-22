@@ -157,9 +157,7 @@ body {
 }
 
 
-/* =========================================
-   HERO BUTTONS
-========================================= */
+/*HERO BUTTONS */
 
 .hero-button {
     display: flex;
@@ -199,9 +197,7 @@ body {
 }
 
 
-/* =========================================
-   PROFILE IMAGE
-========================================= */
+/* styling the profile image */
 
 .hero-content img {
     position: absolute;
@@ -212,4 +208,44 @@ body {
     object-fit: contain;
     object-position: bottom;
     z-index: 1;
+}
+
+
+
+/* adding media queries */
+
+@media (max-width: 1024px) {
+
+    /* Main container */
+    .container {
+        width: 90%;
+    }
+
+    /* Navigation */
+    .navbar {
+        padding: 25px 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    /* Hero section */
+    .hero {
+        padding: 40px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+        max-width: 350px;
+    }
+
+    .hero-description {
+        max-width: 320px;
+    }
+
+    /* Profile image */
+    .hero-content img {
+        width: 45%;
+    }
 }
