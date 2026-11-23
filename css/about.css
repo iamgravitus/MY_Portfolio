@@ -15,6 +15,29 @@ body {
 }
 
 
+/* NAVIGATION BAR */
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 30px;
+    background: white;
+    border-radius: 12px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #6335ca;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #171536;
+}
+
+
 /* MAIN WHITE CONTAINER */
 
 main {
@@ -160,12 +183,78 @@ main > section:nth-child(2) {
 }
 
 
-/* TABLET AND MOBILE */
+/* LARGE LAPTOPS AND DESKTOPS */
+@media (min-width: 1201px) {
+    main {
+        max-width: 1200px;
+    }
+}
 
-@media (max-width: 800px) {
+
+/* SMALL LAPTOPS */
+@media (max-width: 1200px) and (min-width: 1025px) {
+    main {
+        max-width: 95%;
+        padding: 30px;
+        gap: 25px;
+    }
+
+    .build {
+        font-size: 32px;
+    }
+
+    .skill-container {
+        padding: 20px;
+    }
+}
+
+
+/* TABLETS */
+@media (max-width: 1024px) and (min-width: 769px) {
+    body {
+        padding: 20px;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .build {
+        font-size: 28px;
+    }
+
+    .web,
+    .learn,
+    .solver {
+        grid-template-columns: 50px 1fr;
+        gap: 12px;
+    }
+
+    .web-image,
+    .con-learn,
+    .handshake {
+        width: 50px;
+        height: 50px;
+    }
+
+    .skill-container {
+        padding: 18px;
+    }
+}
+
+
+/* MOBILE PHONES */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
     main {
         grid-template-columns: 1fr;
         padding: 25px;
+        gap: 25px;
     }
 
     .container,
@@ -174,23 +263,62 @@ main > section:nth-child(2) {
         grid-column: 1;
         grid-row: auto;
     }
+
+    .build {
+        font-size: 30px;
+    }
+
+    .skill-container {
+        align-content: start;
+    }
 }
 
-@media (max-width: 500px) {
+
+/* SMALL MOBILE PHONES */
+@media (max-width: 480px) {
     body {
         padding: 10px;
     }
 
     main {
         margin: 10px auto;
-        padding: 20px;
+        padding: 18px;
     }
 
     .build {
-        font-size: 28px;
+        font-size: 25px;
+    }
+
+    .my-journey > p:last-child {
+        font-size: 14px;
+    }
+
+    .web,
+    .learn,
+    .solver {
+        grid-template-columns: 45px 1fr;
+        gap: 10px;
+    }
+
+    .web-image,
+    .con-learn,
+    .handshake {
+        width: 45px;
+        height: 45px;
+        padding: 8px;
     }
 
     .skill-container {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .skill {
+        font-size: 24px;
+    }
+
+    .html,
+    .css {
         padding: 15px;
     }
 }

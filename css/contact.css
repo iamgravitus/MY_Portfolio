@@ -21,6 +21,29 @@ body {
 }
 
 
+
+/* NAVIGATION BAR */
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 30px;
+    background: white;
+    border-radius: 12px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #6335ca;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #171536;
+}
+
 /* MAIN CONTAINER */
 
 .contact-container {
@@ -214,12 +237,64 @@ body {
 }
 
 
-/* TABLET AND MOBILE */
 
-@media (max-width: 800px) {
+/* LARGE LAPTOPS AND DESKTOPS */
+@media (min-width: 1201px) {
+    .contact-container {
+        max-width: 1100px;
+    }
+}
 
+
+/* SMALL LAPTOPS */
+@media (max-width: 1200px) and (min-width: 1025px) {
+    .contact-container {
+        max-width: 95%;
+        padding: 30px;
+        gap: 25px;
+    }
+
+    .intro-content h1 {
+        font-size: 34px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+}
+
+
+/* TABLETS */
+@media (max-width: 1024px) and (min-width: 769px) {
     body {
         padding: 20px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .intro-content {
+        padding: 10px;
+    }
+
+    .intro-content h1 {
+        font-size: 29px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+
+/* MOBILE PHONES */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+        align-items: flex-start;
     }
 
     .contact-container {
@@ -233,34 +308,57 @@ body {
     }
 
     .intro-content h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
 
+    .contact-form {
+        padding: 25px;
+    }
 }
 
 
-/* SMALL MOBILE */
-
-@media (max-width: 500px) {
-
+/* SMALL MOBILE PHONES */
+@media (max-width: 480px) {
     body {
-        padding: 12px;
+        padding: 10px;
     }
 
     .contact-container {
         padding: 15px;
+        gap: 20px;
     }
 
     .intro-content h1 {
-        font-size: 27px;
+        font-size: 25px;
+    }
+
+    .intro-label {
+        font-size: 12px;
+    }
+
+    .intro-text {
+        font-size: 14px;
     }
 
     .contact-form {
-        padding: 20px;
+        padding: 18px;
     }
 
     .contact-form h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
+    .input-box {
+        gap: 10px;
+        padding: 0 12px;
+    }
+
+    .message-box {
+        height: 110px;
+    }
+
+    .message-box textarea {
+        height: 90px;
+        resize: vertical;
+    }
 }

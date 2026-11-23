@@ -214,38 +214,167 @@ body {
 
 /* adding media queries */
 
-@media (max-width: 1024px) {
+/* LARGE LAPTOPS AND DESKTOPS */
+@media (min-width: 1201px) {
+    .container {
+        width: 80%;
+    }
+}
 
-    /* Main container */
+
+/* SMALL LAPTOPS */
+@media (max-width: 1200px) and (min-width: 1025px) {
     .container {
         width: 90%;
     }
 
-    /* Navigation */
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content img {
+        width: 45%;
+    }
+}
+
+
+/* TABLETS */
+@media (max-width: 1024px) and (min-width: 769px) {
+
+    .container {
+        width: 92%;
+    }
+
     .navbar {
-        padding: 25px 5%;
+        padding: 20px 5%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 40px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+        max-width: 320px;
+    }
+
+    .hero-description {
+        max-width: 300px;
+    }
+
+    .hero-content img {
+        width: 45%;
+    }
+}
+
+
+/* MOBILE PHONES */
+@media (max-width: 768px) {
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .navbar {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 35px 5%;
+    }
+
+    .hero-content {
+        min-height: 65vh;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+        max-width: 100%;
+    }
+
+    .hero-description {
+        max-width: 100%;
+    }
+
+    .hero-content img {
+        position: relative;
+        width: 75%;
+        height: auto;
+        align-self: center;
+        margin-top: 30px;
+    }
+}
+
+
+/* SMALL MOBILE PHONES */
+@media (max-width: 480px) {
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
     }
 
     .nav-links {
         gap: 15px;
     }
 
-    /* Hero section */
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hire-btn {
+        padding: 8px 15px;
+    }
+
     .hero {
-        padding: 40px 5%;
+        padding: 30px 20px;
+    }
+
+    .hero-content {
+        min-height: auto;
     }
 
     .hero-content h1 {
-        font-size: 32px;
-        max-width: 350px;
+        font-size: 25px;
+    }
+
+    .intro-label {
+        font-size: 10px;
     }
 
     .hero-description {
-        max-width: 320px;
+        font-size: 13px;
     }
 
-    /* Profile image */
+    .hero-button {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .primary-btn {
+        padding: 10px 20px;
+    }
+
     .hero-content img {
-        width: 45%;
+        width: 90%;
     }
 }
+
